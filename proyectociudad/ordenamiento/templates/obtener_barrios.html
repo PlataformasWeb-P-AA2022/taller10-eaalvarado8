@@ -1,0 +1,13 @@
+<h2>Barrios</h2>
+
+<ul>
+{% for b in barrios %}
+    <li style="margin: 10px ;">
+        {{b}} <a href="{% url 'editar_barrio' b.id %}">editar</a>
+    </li>
+    <hr/>
+    {% endfor %}
+</ul>
+<a href="{% url 'crear_barrio' %}">Crear nuevo barrio</a>
+<br />
+<a href="{% url 'index' %}">Inicio</a>
